@@ -2,6 +2,7 @@ library(leaflet)
 library(rgdal)
 library(shiny)
 library(htmltools)
+library(shinyjs)
 
 forest <- readOGR("data/forest.shp")
 base <- readOGR("data/base.shp")
@@ -20,7 +21,7 @@ background_Icons <- icons(
 
 Cate_Icons <- icons(
   iconUrl = ifelse(forest$Type_Desig == 1,
-                   "img/trees.png", ifelse(forest$Type_Desig == 2, 
+                   "img/trees.png", ifelse(forest$Type_Desig == 2,
                                            "img/bird.png", "img/house.png")),
   iconWidth = ifelse(forest$Type_Desig == 1,
                      40, ifelse(forest$Type_Desig == 2, 30, 20)),
@@ -33,10 +34,20 @@ Cate_Icons <- icons(
 )
 
 function(input, output, session) {
+  observeEvent(
+      eventExpr = input$go,
+      handlerExpr = js$addLengend()
+   )
+
   output$map <- renderLeaflet({
                                 leaflet() %>%
                                   addProviderTiles(providers$OpenStreetMap) %>%
-                                  setView(lng = 108.384, lat = 13.794, zoom = 7)
+                                  setView(lng = 108.384, lat = 13.794, zoom = 7) %>%
+                                  htmlwidgets::onRender("
+                                      function(el,x) {
+                                          map = this;
+                                      }
+                                   ")
                               })
 
   observe({
@@ -50,6 +61,7 @@ function(input, output, session) {
               addMarkers(lng = forest$xcoord,
                          lat = forest$ycoord,
                          icon = Cate_Icons,
+                         group = "marker",
                          label = forest$NAME,
                          labelOptions = labelOptions(noHide = F, style = list(
                            "color" = "red",

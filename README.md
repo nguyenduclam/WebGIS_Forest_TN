@@ -7,3 +7,6 @@
 
 + Note 3: Chuyển sang R Shiny Leaflet
 <img src="img/Note_3.png" width="50%">
+
++ Note 4: Custom Icon - khả năng tự động hóa thấp
+<img src="img/Note_4.png" width="50%">

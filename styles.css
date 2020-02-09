@@ -47,3 +47,58 @@ h1, h2, h3, h4 { font-weight: 400; }
 .leaflet-container {
   background-color: white !important;
 }
+
+.label_legend {
+    color: blue;
+    font-weight: bold;
+    margin-left: 10px;
+    display: inline-block;
+}
+#overlay0 {
+  position: absolute;
+  background-color: #00FF01;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  z-index: -2;
+  opacity: 0.5;
+  margin-left: -3px;
+  margin-top: 10px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#overlay1 {
+  position: absolute;
+  background-color: #00FF01;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  z-index: -2;
+  opacity: 0.5;
+  margin-left: 11px;
+  margin-top: 13px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#overlay2 {
+  position: absolute;
+  background-color: #00FF01;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  z-index: -2;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-style: solid;
+}
+
+.container {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+}
