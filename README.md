@@ -10,6 +10,15 @@
 
 + Note 4:
     + Làm việc trên R Shiny Leaflet 
-    + Custom Icon - khả năng tự động hóa thấp
+    + Custom Icon Legend - khả năng tự động hóa thấp
     + Tương đối hạn chê khi viết javascript, có hình ảnh phải chèn chuỗi String dạng Base 64
 <img src="img/Note_4.png" width="50%">
+
++ Note 5:
+    + Làm việc trên R Shiny Leaflet - thêm package leaflet extract
+    + Custom Icon Legend - cao hơn Note 4
+    + Thêm Layer Base Map Control
+    + Loại bỏ button, thêm search bar và reset layout map
+    + Không cần thông qua javascript
+    + Hình ảnh vẫn chưa khắc phục (phải chuyển quan base 64)
+<img src="img/Note_5.png" width="50%">
