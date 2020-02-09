@@ -8,5 +8,8 @@
 + Note 3: Chuyển sang R Shiny Leaflet
 <img src="img/Note_3.png" width="50%">
 
-+ Note 4: Custom Icon - khả năng tự động hóa thấp
++ Note 4:
+    + Làm việc trên R Shiny Leaflet 
+    + Custom Icon - khả năng tự động hóa thấp
+    + Tương đối hạn chê khi viết javascript, có hình ảnh phải chèn chuỗi String dạng Base 64
 <img src="img/Note_4.png" width="50%">
