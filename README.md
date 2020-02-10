@@ -6,7 +6,7 @@
         + Sử dụng nhiều thư viện khác nhau hỗ trợ cho leaflet như: leaflet-searrch, leaflet-providers.js, leaflet-ajax, L.Control.ZoomMin
         + Chuyển đổi dữ liệu shp sang 2 dạng chính là json và js (biến chuỗi json thành biến trong javascript)
         + Áp dụng kỹ thuật $.getJSON để biên tập dữ liệu định lượng
-        + <img src="img/Note_img/Note_1_1.png" width="50%">  
+<img src="img/Note_img/Note_1_1.png" width="50%">  
 
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
 <img src="img/Note_img/Note_2.png" width="50%">
