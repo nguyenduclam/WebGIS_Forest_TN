@@ -4,10 +4,10 @@
 + Note 1.0: Đã upload dữ liệu lên Geoserver và view lên Web để nhìn tổng quan
 <img src="img/Note_img/Note_1.png" width="50%">
 + Note 1.1: Quay lại ý tưởng Leaflet và Geoserver
-    + Hoàn thành tương đương như R Shiny Leaflet
-    + Sử dụng nhiều thư viện khác nhau hỗ trợ cho leaflet như: leaflet-searrch, leaflet-providers.js, leaflet-ajax, L.Control.ZoomMin
-    + Chuyển đổi dữ liệu shp sang 2 dạng chính là json và js (biến chuỗi json thành biến trong javascript)
-    + Áp dụng kỹ thuật $.getJSON để biên tập dữ liệu định lượng
+    - Hoàn thành tương đương như R Shiny Leaflet
+    - Sử dụng nhiều thư viện khác nhau hỗ trợ cho leaflet như: leaflet-searrch, leaflet-providers.js, leaflet-ajax, L.Control.ZoomMin
+    - Chuyển đổi dữ liệu shp sang 2 dạng chính là json và js (biến chuỗi json thành biến trong javascript)
+    - Áp dụng kỹ thuật $.getJSON để biên tập dữ liệu định lượng
 <img src="img/Note_img/Note_1_1.png" width="50%">
 
 ## Note 2
