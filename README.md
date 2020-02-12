@@ -12,7 +12,7 @@
 + Chưa bật tắt được các lớp $.getJSON
 <img src="img/Note_img/Note_1_1.png" width="50%">
 
-### Note 1.1: Thêm Bar Chart và bặt tắt các lớp
+### Note 1.1: Thêm Bar Chart và bật tắt các lớp
 + Đã bật tắt được các lớp $.getJSON
 + Thay đổi thư viện L.Control.ZoomMin thành leaflet.zoomhome
 + Không sử dụng dữ liệu js, chỉ còn sử dụng json hoặc geoJSON
