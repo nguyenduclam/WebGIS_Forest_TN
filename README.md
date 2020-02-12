@@ -9,7 +9,15 @@
 + Sử dụng nhiều thư viện khác nhau hỗ trợ cho leaflet như: leaflet-searrch, leaflet-providers.js, leaflet-ajax, L.Control.ZoomMin
 + Chuyển đổi dữ liệu shp sang 2 dạng chính là json và js (biến chuỗi json thành biến trong javascript)
 + Áp dụng kỹ thuật $.getJSON để biên tập dữ liệu định lượng
++ Chưa bật tắt được các lớp $.getJSON
 <img src="img/Note_img/Note_1_1.png" width="50%">
+
+### Note 1.1: Thêm Bar Chart và bặt tắt các lớp
++ Đã bật tắt được các lớp $.getJSON
++ Thay đổi thư viện L.Control.ZoomMin thành leaflet.zoomhome
++ Không sử dụng dữ liệu js, chỉ còn sử dụng json hoặc geoJSON
++ Thêm Bar Chart bằng thư viện leaflet.mincharts (có hỗ trợ cả bên R)
+<img src="img/Note_img/Note_1_2.png" width="50%">
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
