@@ -25,9 +25,11 @@
 <img src="img/Note_img/Note_1_3.png" width="50%">
 <h3>Vấn đề mới</h3>
 <h4>Cách 1</h4>
++ Idea:
     + Nên dynamic legend: bật lớp nào thì chỉ cần hiện legend lớp đó
     + Nếu bật lớp khác thì tự động tắt lớp vừa bật
 <h4>Cách 2</h4>
++ Idea:
     + Cho kéo thả legend
     + Hoặc tự động fix legend nhỏ lại
 <h4>Cách 3</h4>
