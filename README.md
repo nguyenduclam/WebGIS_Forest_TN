@@ -3,7 +3,7 @@
 ## Note 1
 + Note 1.0: Đã upload dữ liệu lên Geoserver và view lên Web để nhìn tổng quan
 <img src="img/Note_img/Note_1.png" width="50%">
-+ <a href='https://nguyenduclam.github.io/'>Link Demo</a>
++ <a href='https://nguyenduclam.github.io/webatlas_taynguyen_forest/index.html'>Link Demo</a>
 
 ### Note 1.1: Quay lại ý tưởng Leaflet và Geoserver
 + Hoàn thành tương đương như R Shiny Leaflet
