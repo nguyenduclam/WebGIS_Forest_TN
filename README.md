@@ -13,12 +13,26 @@
 + Chưa bật tắt được các lớp $.getJSON
 <img src="img/Note_img/Note_1_1.png" width="50%">
 
-### Note 1.1: Thêm Bar Chart và bật tắt các lớp
+### Note 1.2: Thêm Bar Chart và bật tắt các lớp
 + Đã bật tắt được các lớp $.getJSON
 + Thay đổi thư viện L.Control.ZoomMin thành leaflet.zoomhome
 + Không sử dụng dữ liệu js, chỉ còn sử dụng json hoặc geoJSON
 + Thêm Bar Chart bằng thư viện leaflet.mincharts (có hỗ trợ cả bên R)
 <img src="img/Note_img/Note_1_2.png" width="50%">
+
+### Note 1.2: Thêm Popup cho Chart
++ Thêm và style lại Popup - dựa theo mẫu của R
+<img src="img/Note_img/Note_1_3.png" width="50%">
+<h3>Vấn đề mới</h3>
+<h4>Cách 1</h4>
++ Nên dynamic legend: bật lớp nào thì chỉ cần hiện legend lớp đó
++ Nếu bật lớp khác thì tự động tắt lớp vừa bật
+<h4>Cách 2</h4>
++ Cho kéo thả legend
++ Hoặc tự động fix legend nhỏ lại
+<h4>Cách 3</h4>
+Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
+<img src="img/Note_img/Note_1_3.png" width="50%">
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
