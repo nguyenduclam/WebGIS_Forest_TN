@@ -20,7 +20,7 @@
 + Thêm Bar Chart bằng thư viện leaflet.mincharts (có hỗ trợ cả bên R)
 <img src="img/Note_img/Note_1_2.png" width="50%">
 
-### Note 1.2: Thêm Popup cho Chart
+### Note 1.3: Thêm Popup cho Chart
 + Thêm và style lại Popup - dựa theo mẫu của R
 <img src="img/Note_img/Note_1_3.png" width="50%">
 <h3>Vấn đề mới</h3>
@@ -39,11 +39,16 @@
 <h4>Cách 3</h4>
 Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 
-### Note 1.3: Chỉnh sửa legend - có thể bật tắt
+### Note 1.4: Chỉnh sửa legend - có thể bật tắt
 <a href='http://apps.socib.es/Leaflet.TimeDimension/examples/'>Preference</a>
 + Đã có thể Draggable - kéo thả Legend
 + Đã có thể Dynamic - bật tắt lớp hiển thị thì legend cũng bật tắt theo
 <img src="img/Note_img/Note_1_4.png" width="50%">
+
+### Note 1.5: Thêm lớp base JSON - không sử dụng thông qua WMS Geoserver
++ Do chưa cài đặt Geoserver lên các domain khác nên không sử dụng
++ Tính thẩm mỹ: đẹp hơn so với màu xám - cũng như mún tận dụng các providers khác
+<img src="img/Note_img/Note_1_5.png" width="50%">
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
