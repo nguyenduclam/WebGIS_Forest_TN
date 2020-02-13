@@ -67,6 +67,7 @@ Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 
 ## Note 6
 + Note 6:
+    + Nhược điểm lớn của R: Load chậm hơn
     + Thêm Chart cho bộ dữ liệu
     + Không thể bật tắt Chart (do LayerGroup không hỗ trợ)
 <img src="img/Note_img/Note_6.png" width="50%">
