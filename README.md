@@ -32,7 +32,6 @@
 + Hoặc tự động fix legend nhỏ lại
 <h4>Cách 3</h4>
 Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
-<img src="img/Note_img/Note_1_3.png" width="50%">
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
