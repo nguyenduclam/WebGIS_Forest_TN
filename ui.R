@@ -1,5 +1,7 @@
 library(leaflet)
 library(leaflet.extras)
+library(leaflet.minicharts)
+library(dplyr)
 library(rgdal)
 library(shiny)
 library(htmltools)

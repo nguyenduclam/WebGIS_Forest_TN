@@ -1,11 +1,14 @@
 library(leaflet)
 library(leaflet.extras)
+library(leaflet.minicharts)
+library(dplyr)
 library(rgdal)
 library(shiny)
 library(htmltools)
 # library(shinyjs)
 
 forest <- readOGR("data/forest.shp")
+turtle <- readOGR("data/turtle.shp")
 base <- readOGR("data/base.shp")
 
 grades = c("Vườn quốc gia", "Khu bảo vệ cảnh quan", "Khu bảo tồn thiên nhiên")
@@ -13,22 +16,11 @@ labels = c("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAA
            "data:image/png;base64,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",
            "data:image/png;base64,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")
 
-background_Icons <- icons(
-  iconUrl = "img/circle.png",
-  iconWidth = ifelse(forest$Type_Desig == 1,
-                     47, ifelse(forest$Type_Desig == 2, 30, 20)),
-  iconHeight = ifelse(forest$Type_Desig == 1,
-                      47, ifelse(forest$Type_Desig == 2, 30, 20)),
-  iconAnchorX = ifelse(forest$Type_Desig == 1,
-                       25, ifelse(forest$Type_Desig == 2, 15, 10)),
-  iconAnchorY = ifelse(forest$Type_Desig == 1,
-                       25, ifelse(forest$Type_Desig == 2, 16, 10)),
-)
-
 Cate_Icons <- icons(
   iconUrl = ifelse(forest$Type_Desig == 1,
                    "img/trees.png", ifelse(forest$Type_Desig == 2,
                                            "img/bird.png", "img/house.png")),
+  shadowUrl = "img/circle.png",
   iconWidth = ifelse(forest$Type_Desig == 1,
                      40, ifelse(forest$Type_Desig == 2, 30, 20)),
   iconHeight = ifelse(forest$Type_Desig == 1,
@@ -37,7 +29,29 @@ Cate_Icons <- icons(
                        20, ifelse(forest$Type_Desig == 2, 15, 10)),
   iconAnchorY = ifelse(forest$Type_Desig == 1,
                        35, ifelse(forest$Type_Desig == 2, 28, 20)),
+  shadowWidth = ifelse(forest$Type_Desig == 1,
+                     47, ifelse(forest$Type_Desig == 2, 30, 20)),
+  shadowHeight = ifelse(forest$Type_Desig == 1,
+                      47, ifelse(forest$Type_Desig == 2, 30, 20)),
+  shadowAnchorX = ifelse(forest$Type_Desig == 1,
+                       25, ifelse(forest$Type_Desig == 2, 15, 10)),
+  shadowAnchorY = ifelse(forest$Type_Desig == 1,
+                       25, ifelse(forest$Type_Desig == 2, 16, 10)),
 )
+data_turtle <- turtle@data
+data_turtle$X2015 <-as.numeric(as.character(data_turtle$X2015))
+data_turtle$X2016 <-as.numeric(as.character(data_turtle$X2016))
+data_turtle$X2017 <-as.numeric(as.character(data_turtle$X2017))
+data_turtle$X2018 <-as.numeric(as.character(data_turtle$X2018))
+data_turtle$X2019 <-as.numeric(as.character(data_turtle$X2019))
+
+data_turtle_year <- as.data.frame(cbind(data_turtle$X2015,
+                                    data_turtle$X2016,
+                                    data_turtle$X2017,
+                                    data_turtle$X2018,
+                                    data_turtle$X2019))
+colnames(data_turtle_year) <- c("Năm 2015", "Năm 2016", "Năm 2017", "Năm 2018", "Năm 2019")
+color_turtle <- c("#ff000c", "#00f4ff", "#fff200", "#008514", "#dc34eb")
 
 function(input, output, session) {
   # observeEvent(
@@ -49,7 +63,7 @@ function(input, output, session) {
                                   addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>%
                                   addProviderTiles(providers$Esri.WorldImagery, group = "Esri Word Map") %>%
                                   addProviderTiles(providers$CartoDB, group = "CartoDB") %>%
-                                  setView(lng = 108.384, lat = 13.794, zoom = 7) %>%
+                                  setView(lng = 106.134, lat = 13.125, zoom = 7) %>%
                                   # htmlwidgets::onRender("
                                   #    function(el,x) {
                                   #        map = this;
@@ -62,14 +76,12 @@ function(input, output, session) {
             leafletProxy("map", data = base) %>%
               clearShapes() %>%
               addPolygons(data = base,
+                          group = "Tỉnh",
                           color = "pink") %>%
               addMarkers(lng = forest$xcoord,
                          lat = forest$ycoord,
-                         icon = background_Icons) %>%
-              addMarkers(lng = forest$xcoord,
-                         lat = forest$ycoord,
                          icon = Cate_Icons,
-                         group = "marker",
+                         group = "Rừng",
                          label = forest$NAME,
                          labelOptions = labelOptions(noHide = F, style = list(
                            "color" = "red",
@@ -77,14 +89,24 @@ function(input, output, session) {
                            "font-style" = "italic",
                            "box-shadow" = "3px 3px rgba(0,0,0,0.25)",
                            "font-size" = "12px",
-                           "border-color" = "rgba(0,0,0,0.5)"
-                         ))) %>%
-              addSearchFeatures(
-                targetGroups = "marker",
-                options = searchFeaturesOptions(
-                  zoom = 12, openPopup = TRUE, firstTipSubmit = TRUE,
-                  autoCollapse = TRUE, hideMarkerOnCollapse = TRUE)) %>%
-              addControl(html = paste("<h2>Chú giải</h2>",
+                           "border-color" = "rgba(0,0,0,0.5)"))) %>%
+              addMinicharts(lng = turtle$xcoord,
+                            lat = turtle$ycoord,
+                            maxValues = 5,
+                            chartdata = data_turtle_year,
+                            colorPalette = color_turtle,
+                            legend = FALSE,
+                            showLabels = TRUE,
+                            type = "bar",
+                            width = "60",
+                            height = "60") %>%
+              addSearchFeatures(targetGroups = "Rừng",
+                                options = searchFeaturesOptions(zoom = 12,
+                                                                openPopup = TRUE,
+                                                                firstTipSubmit = TRUE,
+                                                                autoCollapse = TRUE,
+                                                                hideMarkerOnCollapse = TRUE)) %>%
+              addControl(html = paste("<div id='legend' style='margin-right: 10px'>", "<h2>Chú giải</h2>",
                                       "<div class='container'>",
                                       "<div id='overlay0'></div>",
                                       "<img src=", labels[1], "width='40' height='50'>",
@@ -99,8 +121,30 @@ function(input, output, session) {
                                       "<div id='overlay2'></div>",
                                       "<img src=", labels[3], "width='20' height='30' style='margin:0px 0px 0px 20px'>",
                                       "<span class='label_legend'>", grades[3], "</span>",
-                                      "</div>"), position = "bottomright") %>%
+                                      "</div>", '<br>',
+                                      "<div class='container'>",
+                                      "<div id='rec1'></div>",
+                                      "<span class='label_legend_rec'>", "Năm 2015", "</span>",
+                                      "</div>", '<br>',
+                                      "<div class='container'>",
+                                      "<div id='rec2'></div>",
+                                      "<span class='label_legend_rec'>", "Năm 2016", "</span>",
+                                      "</div>", '<br>',
+                                      "<div class='container'>",
+                                      "<div id='rec3'></div>",
+                                      "<span class='label_legend_rec'>", "Năm 2017", "</span>",
+                                      "</div>", '<br>',
+                                      "<div class='container'>",
+                                      "<div id='rec4'></div>",
+                                      "<span class='label_legend_rec'>", "Năm 2018", "</span>",
+                                      "</div>", '<br>',
+                                      "<div class='container'>",
+                                      "<div id='rec5'></div>",
+                                      "<span class='label_legend_rec'>", "Năm 2019", "</span>",
+                                      "</div>", '<br>',
+                                      "</div>"), position = "bottomleft") %>%
               addLayersControl(baseGroups = c("Open Street Map", "Esri Word Map", "CartoDB"),
+                               overlayGroups = c("Tỉnh", "Rừng"),
                                options = layersControlOptions(collapsed = FALSE))
           })
 }

@@ -2,7 +2,7 @@ input[type="number"] {
   max-width: 80%;
 }
 
-div.outer {
+.outer {
   position: fixed;
   top: 0px;
   left: 0;
@@ -48,12 +48,21 @@ h1, h2, h3, h4 { font-weight: 400; }
   background-color: white;
 }
 
-.label_legend {
-    color: blue;
+.label_legend, .label_legend_rec {
+    color: black;
     font-weight: bold;
     margin-left: 10px;
     display: inline-block;
 }
+
+.label_legend {
+    margin-left: 10px;
+}
+
+.label_legend_rec {
+    margin-left: 60px;
+}
+
 #overlay0 {
   position: absolute;
   background-color: #00FF01;
@@ -100,4 +109,31 @@ h1, h2, h3, h4 { font-weight: 400; }
   position: relative;
   width: fit-content;
   margin: 0;
+}
+
+#rec1, #rec2, #rec3, #rec4, #rec5{
+    position: absolute;
+    height: 20px;
+    width: 50px;
+    z-index: -2;
+}
+
+#rec1 {
+    background-color: #ff000c;
+}
+
+#rec2 {
+    background-color: #00f4ff;
+}
+
+#rec3 {
+    background-color: #fff200;
+}
+
+#rec4 {
+    background-color: #008514;
+}
+
+#rec5 {
+    background-color: #dc34eb;
 }

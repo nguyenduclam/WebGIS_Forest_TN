@@ -3,6 +3,7 @@
 ## Note 1
 + Note 1.0: Đã upload dữ liệu lên Geoserver và view lên Web để nhìn tổng quan
 <img src="img/Note_img/Note_1.png" width="50%">
++ <a href='https://nguyenduclam.github.io/'>Link Demo</a>
 
 ### Note 1.1: Quay lại ý tưởng Leaflet và Geoserver
 + Hoàn thành tương đương như R Shiny Leaflet
@@ -43,3 +44,9 @@
     + Không cần thông qua javascript
     + Hình ảnh vẫn chưa khắc phục (phải chuyển quan base 64)
 <img src="img/Note_img/Note_5.png" width="50%">
+
+## Note 6
++ Note 6:
+    + Thêm Chart cho bộ dữ liệu
+    + Không thể bật tắt Chart (do LayerGroup không hỗ trợ)
+<img src="img/Note_img/Note_6.png" width="50%">
