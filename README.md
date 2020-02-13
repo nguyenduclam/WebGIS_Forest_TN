@@ -22,6 +22,7 @@
 
 ### Note 1.2: Thêm Popup cho Chart
 + Thêm và style lại Popup - dựa theo mẫu của R
+<img src="img/Note_img/Note_1_3.png" width="50%">
 <h3>Vấn đề mới</h3>
 <h4>Cách 1</h4>
 + Idea:
@@ -37,7 +38,7 @@
     + Hoặc tự động fix legend nhỏ lại
 <h4>Cách 3</h4>
 Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
-<img src="img/Note_img/Note_1_3.png" width="50%">
+
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
