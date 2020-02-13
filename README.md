@@ -39,6 +39,11 @@
 <h4>Cách 3</h4>
 Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 
+### Note 1.3: Chỉnh sửa legend - có thể bật tắt
+<a href='http://apps.socib.es/Leaflet.TimeDimension/examples/'>Preference</a>
++ Đã có thể Draggable - kéo thả Legend
++ Đã có thể Dynamic - bật tắt lớp hiển thị thì legend cũng bật tắt theo
+<img src="img/Note_img/Note_1_4.png" width="50%">
 
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
