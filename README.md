@@ -60,7 +60,7 @@ Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 + Note 4:
     + Làm việc trên R Shiny Leaflet 
     + Custom Icon Legend - khả năng tự động hóa thấp
-    + Tương đối hạn chê khi viết javascript, có hình ảnh phải chèn chuỗi String dạng Base 64
+    + Tương đối hạn chế khi viết javascript, có hình ảnh phải chèn chuỗi String dạng Base 64
 <img src="img/Note_img/Note_4.png" width="50%">
 
 ## Note 5
@@ -70,7 +70,7 @@ Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
     + Thêm Layer Base Map Control
     + Loại bỏ button, thêm search bar và reset layout map
     + Không cần thông qua javascript
-    + Hình ảnh vẫn chưa khắc phục (phải chuyển quan base 64)
+    + Hình ảnh vẫn chưa khắc phục (phải chuyển qua base 64)
 <img src="img/Note_img/Note_5.png" width="50%">
 
 ## Note 6
