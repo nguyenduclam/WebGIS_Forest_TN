@@ -25,16 +25,14 @@
 <img src="img/Note_img/Note_1_3.png" width="50%">
 <h3>Vấn đề mới</h3>
 <h4>Cách 1</h4>
-+ Idea:
-
+<h5>Idea</h5>
     + Nên dynamic legend: bật lớp nào thì chỉ cần hiện legend lớp đó
-    
+    <br>
     + Nếu bật lớp khác thì tự động tắt lớp vừa bật
 <h4>Cách 2</h4>
-+ Idea:
-    
+<h5>Idea</h5>
     + Cho kéo thả legend
-    
+    <br>
     + Hoặc tự động fix legend nhỏ lại
 <h4>Cách 3</h4>
 Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
@@ -47,7 +45,7 @@ Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 
 ### Note 1.5: Thêm lớp base JSON - không sử dụng thông qua WMS Geoserver
 + Do chưa cài đặt Geoserver lên các domain khác nên không sử dụng
-+ Tính thẩm mỹ: đẹp hơn so với màu xám - cũng như mún tận dụng các providers khác
++ Tính thẩm mỹ: đẹp hơn so với màu xám - cũng như muốn tận dụng các providers khác
 <img src="img/Note_img/Note_1_5.png" width="50%">
 
 ## Note 2
