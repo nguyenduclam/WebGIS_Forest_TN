@@ -48,6 +48,10 @@ Gộp cả 2 cách trên: vừa cho phép dynamic, vừa cho phép kéo thả
 + Tính thẩm mỹ: đẹp hơn so với màu xám - cũng như muốn tận dụng các providers khác
 <img src="img/Note_img/Note_1_5.png" width="50%">
 
+### Note 1.6: Thêm công cụ sửa chữa Leaflet Draw
++ Thêm plugin Leaflet Draw
+<img src="img/Note_img/Note_1_6.png" width="50%">
+
 ## Note 2
 + Note 2: Geoserver không hỗ trợ xuất điểm có thứ tự
 <img src="img/Note_img/Note_2.png" width="50%">

@@ -100,6 +100,11 @@ function(input, output, session) {
                             type = "bar",
                             width = "60",
                             height = "60") %>%
+              addDrawToolbar(targetGroup = "draw",
+                             position = "bottomright",
+                             circleOptions = FALSE,
+                             editOptions = editToolbarOptions(selectedPathOptions = selectedPathOptions())) %>%
+              addStyleEditor(position = "bottomright") %>%
               addSearchFeatures(targetGroups = "Rừng",
                                 options = searchFeaturesOptions(zoom = 12,
                                                                 openPopup = TRUE,
@@ -144,7 +149,7 @@ function(input, output, session) {
                                       "</div>", '<br>',
                                       "</div>"), position = "bottomleft") %>%
               addLayersControl(baseGroups = c("Open Street Map", "Esri Word Map", "CartoDB"),
-                               overlayGroups = c("Tỉnh", "Rừng"),
+                               overlayGroups = c("Tỉnh", "Rừng","draw"),
                                options = layersControlOptions(collapsed = FALSE))
           })
 }
